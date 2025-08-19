@@ -8,14 +8,21 @@ export default function Login() {
         < View style={style.container} >
             <View style={style.boxTop}>
                 <Image
-                source={Logo}
+                    source={Logo}
+                    style={style.logo}
+                    resizeMode="contain"
                 />
-                <Text>Bem vindo de volta!</Text>
+                <Text style={style.text}>Bem vindo de volta</Text>
             </View>
             <View style={style.boxMid}>
-                <Text>Endereço de E-mail</Text>
-                <TextInput />
-                <Text>Senha</Text>
+                <Text style={style.titleInput}>ENDEREÇO DE E-MAIL</Text>
+                <View style={style.boxInput}>
+                    <TextInput
+                        style={style.input}
+                    />
+                    <Text>Olá</Text>
+                </View>
+                <Text style={style.titleInput}>SENHA</Text>
                 <TextInput />
             </View>
             <View style={style.boxBotton}>
