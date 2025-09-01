@@ -6,7 +6,7 @@ import {
 } from "react-native";
 import { style } from "./styles";
 import Logo from "../../assets/logo.png";
-import { MaterialIcons } from '@expo/vector-icons'
+import { MaterialIcons, Octicons } from '@expo/vector-icons'
 import { themas } from "../../global/themes"
 import { Input } from "../../components/input";
 
@@ -46,7 +46,18 @@ export default function Login() {
             </View>
             <View style={style.boxMid}>
                 <Input 
+                value={email}
+                onChangeText={setEmail}
                 title="ENDEREÇO E-MAIL"
+                IconRight={MaterialIcons}
+                IconRightName="email"
+                />
+                <Input 
+                value={password}
+                onChangeText={setPassword}
+                title="SENHA"
+                IconRight={Octicons}
+                IconRightName="eye-closed"
                 />
                 {/* <Text style={style.titleInput}>ENDEREÇO DE E-MAIL</Text> */}
 
