@@ -1,6 +1,6 @@
 import React, { forwardRef, Fragment } from "react";
 import { View, Text, TextInput, TextInputProps } from 'react-native';
-import { style } from "../../pages/login/styles"; // Gamb
+import { style } from "./style";
 // import { MaterialIcons } from '@expo/vector-icons'; -- Vou Tirar esse dps!
 import { themas } from "../../global/themes";
 import { FontAwesome, MaterialIcons, Octicons } from '@expo/vector-icons';
@@ -21,7 +21,7 @@ type Props = TextInputProps & {
 
 export const Input = forwardRef(() => {
     return (
-        <>
+        <Fragment>
             <Text style={style.titleInput}>ENDEREÇO DE E-MAIL</Text>
             <View style={style.boxInput}>
                 <TextInput
@@ -33,6 +33,6 @@ export const Input = forwardRef(() => {
                     color={themas.colors.gray}
                 />
             </View>
-        </>
+        </Fragment>
     )
 })
