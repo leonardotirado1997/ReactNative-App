@@ -18,7 +18,7 @@ type Props = TextInputProps & {
     onIconLeftPress?: () => void, // Ação do icone
     onIconRightPress?: () => void,
     height?: number,
-    labelStyle?:StyleProp<TextStyle>
+    labelStyle?: StyleProp<TextStyle>
 }
 
 export const Input = forwardRef<TextInput, Props>((Props, ref: ForwardedRef<TextInput> | null) => {
@@ -48,7 +48,7 @@ export const Input = forwardRef<TextInput, Props>((Props, ref: ForwardedRef<Text
     return (
         <Fragment>
             {title && <Text style={[style.titleInput, labelStyle]}>{title}</Text>}
-            <View style={[style.boxInput, { paddingLeft: calculateSizePaddingLeft(), height:height||40 }]}>
+            <View style={[style.boxInput, { paddingLeft: calculateSizePaddingLeft(), height: height || 40 }]}>
                 {IconLeft && IconLeftName && (
                     <TouchableOpacity onPress={onIconLeftPress} style={style.Button}>
                         <IconLeft name={IconLeftName as any} size={20} color={themas.colors.gray}
