@@ -15,6 +15,7 @@ export default function List() {
 
     const { taskList } = useContext<AuthContextType>(AuthContextList)
     const swipeableRefs = useRef([])
+
     const renderRightActions = () => {
         return (<View style={style.button}>
             <AntDesign
@@ -22,7 +23,19 @@ export default function List() {
                 size={20}
                 color={'#FFF'}
             />
-        </View>)
+        </View>
+        )
+    }
+    const renderLeftActions = () => {
+        return (
+            <View style={[style.button, { backgroundColor: themas.colors.blueLight }]}>
+                <AntDesign
+                    name="edit"
+                    size={20}
+                    color={'#FFF'}
+                />
+            </View>
+        )
     }
 
     const _renderCard = (item: PropCard, index) => {
@@ -32,6 +45,7 @@ export default function List() {
                 ref={(ref) => swipeableRefs.current[index] = ref}
                 key={index}
                 renderRightActions={renderRightActions}
+                renderLeftActions={renderLeftActions}
             >
                 <View style={style.card}>
                     <View style={style.rowCard}>
