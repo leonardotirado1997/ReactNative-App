@@ -42,7 +42,7 @@ export const AuthProviderList = (props: any): any => {
     }
     const onClose = () => {
         modalizeRef?.current?.close();
-        setData(); // 🔹 limpa os campos ao fechar o modal
+        setData();
     }
 
 
